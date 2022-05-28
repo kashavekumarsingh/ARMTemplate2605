@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMTemplate", "ARMTemplate\ARMTemplate.csproj", "{F85E33B6-FCD2-4378-8DB7-715C9FD38C93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ARMTemplate", "ARMTemplate\ARMTemplate.csproj", "{F85E33B6-FCD2-4378-8DB7-715C9FD38C93}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ArmTemplates.Templates", "ArmTemplates.Templates\ArmTemplates.Templates.deployproj", "{C542CBD8-52E3-4C75-A601-C4A55167A4A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F85E33B6-FCD2-4378-8DB7-715C9FD38C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F85E33B6-FCD2-4378-8DB7-715C9FD38C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F85E33B6-FCD2-4378-8DB7-715C9FD38C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C542CBD8-52E3-4C75-A601-C4A55167A4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C542CBD8-52E3-4C75-A601-C4A55167A4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C542CBD8-52E3-4C75-A601-C4A55167A4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C542CBD8-52E3-4C75-A601-C4A55167A4A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
