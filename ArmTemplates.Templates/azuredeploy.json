@@ -54,7 +54,7 @@
       "apiVersion": "2015-08-01",
       "location" : "East US",
       "properties": {
-        "keyVaultId" : "[resourceId('Microsoft.KeyVault/vaults','keyvault2605-1')]",
+        "keyVaultId": "/subscriptions/5761586f-99b8-4741-80df-d6143a7b7bac/resourceGroups/armappBaseName-dev-2605/providers/Microsoft.KeyVault/vaults/keyvault2605-1",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appBaseName'))]"
       }
     },
