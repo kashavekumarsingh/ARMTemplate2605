@@ -54,7 +54,9 @@
       "location": "[resourceGroup().location]",
       "apiVersion": "2015-08-01",
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', parameters('appBaseName'))]"
+        "[resourceId('Microsoft.Web/serverfarms', parameters('appBaseName'))]",
+        "[resourceId('Microsoft.Web/certificates', 'certificate1')]"
+        
       ],
       "tags": {
         "[concat('hidden-related:', resourceId('Microsoft.Web/serverfarms', parameters('appBaseName')))]": "Resource",
@@ -62,7 +64,15 @@
       },
       "properties": {
         "name": "[parameters('appBaseName')]",
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appBaseName'))]"
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appBaseName'))]",
+        "hostNameSslStates" :[
+          {
+            "name" : "armappbasename-dev-2605.azurewebsites.net",
+            "sslState" : "SniEnabled",
+            "thumbprint": "[reference(resourceId('Microsoft.Web/certificates', 'certificate1')).thumbprint]",
+            "toUpdate" : true
+          }
+        ]
       }
     }
     
