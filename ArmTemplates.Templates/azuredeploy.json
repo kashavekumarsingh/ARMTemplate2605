@@ -49,6 +49,16 @@
       }
     },
     {
+      "type": "Microsoft.Web/certificates",
+      "name" : "certificate1",
+      "apiVersion": "2015-08-01",
+      "location" : "[resourceGroup().location]",
+      "properties": {
+        "keyVaultId" : "[resourceId('Microsoft.KeyVault/vaults','keyvault2605-1')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appBaseName'))]"
+      }
+    },
+    {
       "name": "[parameters('appBaseName')]",
       "type": "Microsoft.Web/sites",
       "location": "[resourceGroup().location]",
