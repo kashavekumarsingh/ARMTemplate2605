@@ -1,9 +1,10 @@
 # Write your PowerShell commands here.
 #Write-Host "Hello World"
-Install-Module Az
-Connect-AzAccount 
+#Install-Module Az
+#Connect-AzAccount 
 
 #Install-Module Az.Websites -Scope CurrentUser -Force
+Install-Module Az.Websites 
 
 $ResourceGroupName="armappBaseName-dev-2605"
 $WebAppName ="armappBaseName-dev-2605"
