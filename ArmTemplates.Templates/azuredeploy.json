@@ -35,7 +35,7 @@
       "name": "[parameters('appBaseName')]",
       "type": "Microsoft.Web/serverfarms",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2015-08-01",
+      "apiVersion": "2019-08-01",
       "sku": {
         "name": "[parameters('appBaseSkuName')]"
       },
@@ -52,7 +52,7 @@
       "name": "[parameters('appBaseName')]",
       "type": "Microsoft.Web/sites",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2015-08-01",
+      "apiVersion": "2019-08-01",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('appBaseName'))]"
         
@@ -68,7 +68,7 @@
     },
     {          
       "type": "Microsoft.Web/certificates",
-      "apiVersion": "2015-08-01",
+      "apiVersion": "2019-08-01",
       "name": "certificate1",
       "location": "[resourceGroup().location]",
       "dependsOn": [
@@ -76,11 +76,24 @@
       ],
       "properties": {
           "keyVaultId": "/subscriptions/5761586f-99b8-4741-80df-d6143a7b7bac/resourceGroups/armappBaseName-dev-2605/providers/Microsoft.KeyVault/vaults/keyvault31051",
-          "password" : "",
+          //"password" : "",
            //"keyVaultSecretName": "[parameters('existingKeyVaultSecretName')]",
           "serverFarmId": "[resourceId('Microsoft.Web/serverFarms', parameters('appBaseName'))]"
       }
     }
+    //{
+    //        "type": "Microsoft.Web/sites/hostnameBindings",
+    //        "name": "[concat(parameters('webAppName'), '/', parameters('customHostname'))]",
+    //        "apiVersion": "2019-08-01",
+    //        "location": "[parameters('location')]",
+    //        "dependsOn": [
+    //            "[resourceId('Microsoft.Web/certificates', variables('certificateName'))]"
+    //        ],
+    //        "properties": {
+    //            "sslState": "[if(variables('enableSSL'), 'SniEnabled', json('null'))]",
+    //            "thumbprint": "[if(variables('enableSSL'), reference(resourceId('Microsoft.Web/certificates', variables('certificateName'))).Thumbprint, json('null'))]"
+    //        }
+    //}
     
   ],
   "outputs": {}
