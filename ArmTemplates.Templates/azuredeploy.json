@@ -69,7 +69,7 @@
     {          
       "type": "Microsoft.Web/certificates",
       "apiVersion": "2019-08-01",
-      "name": "certificate2",
+      "name": "certificate3",
      "location": "[resourceGroup().location]",
       "dependsOn": [
           "[resourceId('Microsoft.Web/sites', parameters('appBaseName'))]"
