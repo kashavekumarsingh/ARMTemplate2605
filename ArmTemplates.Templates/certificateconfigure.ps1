@@ -3,8 +3,8 @@
 #Install-Module Az
 #Connect-AzAccount 
 
-#Install-Module Az.Websites -Scope CurrentUser -Force
-Install-Module Az.Websites -Scope CurrentUser
+Install-Module Az.Websites -Scope CurrentUser -Force
+
 
 $ResourceGroupName="armappBaseName-dev-2605"
 $WebAppName ="armappBaseName-dev-2605"
