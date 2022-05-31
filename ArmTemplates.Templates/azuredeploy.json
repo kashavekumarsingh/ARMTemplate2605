@@ -77,10 +77,10 @@
       "properties": {
           "keyVaultId": "/subscriptions/5761586f-99b8-4741-80df-d6143a7b7bac/resourceGroups/armappBaseName-dev-2605/providers/Microsoft.KeyVault/vaults/keyvault31052",
           "password" : "",
-           "canonicalName":".azurewebsites.net",
-           "hostNames": ["armappbasename-dev-2605.azurewebsites.net"],           
+           "canonicalName":"azurewebsites.net",
+           "hostNames": ["armappbasename-dev-2605.azurewebsites.net"]           
           //"keyVaultSecretName": "[parameters('existingKeyVaultSecretName')]",
-          "serverFarmId": "[resourceId('Microsoft.Web/serverFarms', parameters('appBaseName'))]"
+          //"serverFarmId": "[resourceId('Microsoft.Web/serverFarms', parameters('appBaseName'))]"
           //"serverFarmId" : "/subscriptions/5761586f-99b8-4741-80df-d6143a7b7bac/resourceGroups/armappBaseName-dev-2605/providers/Microsoft.Web/serverfarms/armappBaseName-dev-2605"
       }
     }
