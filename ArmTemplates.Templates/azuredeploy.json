@@ -65,24 +65,23 @@
         "name": "[parameters('appBaseName')]",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appBaseName'))]"        
       }
+    },
+    {          
+      "type": "Microsoft.Web/certificates",
+      "apiVersion": "2019-08-01",
+      "name": "certificate1",
+     "location": "[resourceGroup().location]",
+      "dependsOn": [
+          "[resourceId('Microsoft.Web/sites', parameters('appBaseName'))]"
+      ],
+      "properties": {
+          "keyVaultId": "/subscriptions/5761586f-99b8-4741-80df-d6143a7b7bac/resourceGroups/armappBaseName-dev-2605/providers/Microsoft.KeyVault/vaults/keyvault31052",
+          "password" : "",
+          //"keyVaultSecretName": "[parameters('existingKeyVaultSecretName')]",
+          "serverFarmId": "[resourceId('Microsoft.Web/serverFarms', parameters('appBaseName'))]"
+      }
     }
-    //{          
-    //  "type": "Microsoft.Web/certificates",
-    //  "apiVersion": "2019-08-01",
-    //  "name": "certificate1",
-    // "location": "[resourceGroup().location]",
-    //  "dependsOn": [
-    //      "[resourceId('Microsoft.Web/sites', parameters('appBaseName'))]"
-    //  ],
-    //  "properties": {
-    //      "keyVaultId": "/subscriptions/5761586f-99b8-4741-80df-d6143a7b7bac/resourceGroups/armappBaseName-dev-2605/providers/Microsoft.KeyVault/vaults/keyvault31051",
-    //      "password" : "",
-          
-    //      //"keyVaultSecretName": "[parameters('existingKeyVaultSecretName')]",
-    //      "serverFarmId": "[resourceId('Microsoft.Web/serverFarms', parameters('appBaseName'))]"
-    //  }
-    //}
-    
+
     //{
     //        "type": "Microsoft.Web/sites/hostnameBindings",
     //        "name": "[concat(parameters('webAppName'), '/', parameters('customHostname'))]",
