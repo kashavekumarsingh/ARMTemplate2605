@@ -47,17 +47,7 @@
         "name": "[parameters('appBaseName')]",
         "numberOfWorkers": 1
       }
-    },
-    {
-      "type": "Microsoft.Web/certificates",
-      "name" : "certificate1",
-      "apiVersion": "2015-08-01",
-      "location" : "East US",
-      "properties": {
-      //   "keyVaultId": "/subscriptions/5761586f-99b8-4741-80df-d6143a7b7bac/resourceGroups/armappBaseName-dev-2605/providers/Microsoft.KeyVault/vaults/keyvault2605-1"
-        
-      }
-     },
+    },    
     {
       "name": "[parameters('appBaseName')]",
       "type": "Microsoft.Web/sites",
